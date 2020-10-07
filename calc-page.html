@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>LAZUR</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="zeynep right">
+    <ul>
+      <li>
+        <a href="agency-page.html">Агенство</a>
+      </li>
+      <li>
+        <a href="services-page.html">Услуги</a>
+      </li>
+      <li>
+        <a href="portfolio-page.html">Портфолио</a>
+      </li>
+      <li>
+        <a href="calc-page.html">Калькулятор</a>
+      </li>
+      <li>
+        <a href="contacts-page.html">Контакты</a>
+      </li>
+    </ul>
+  </div>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="wrap">
+          <a href="index.html" class="logo">
+            <div class="logo__img"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo"/></svg></div>
+            <div class="logo__text">Диджитал агентство полного цикла. Веб-сайты. Реклама и продвижение. Поддержка.</div>
+          </a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <button id="main-nav-toggler" class="main-nav__toggler  burger">
+              <svg width="30" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-icon"/></svg>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="agency-page.html" class="main-nav__link">
+                  Агенство
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="services-page.html" class="main-nav__link">
+                  Услуги
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="portfolio-page.html" class="main-nav__link">
+                  Портфолио
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="calc-page.html" class="main-nav__link">
+                  Калькулятор
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="contacts-page.html" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main role="main" class="contacts">
+        <div class="contacts__wrap">
+          <div class="wrap">
+            <div class="contacts__body-col">
+              <div class="contacts__body">
+                <h1 class="contacts__title">Проектный калькулятор</h1>
+                <div class="contacts__info">
+                  <div class="info-part">
+                    <p>Вы можете рассчитать примерный бюджет интересующей услуги.</p>
+                    <p>Либо заполните форму или позвоните <a class="tnw" href="tel:+78005553535">+7 (800) 555 3535</a> и мы сами всё за вас заполним.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__form-col">
+              <form action class="contacts__form feedback-form">
+                <div class="feedback-form__title">Заполните форму и мы свяжемся с вами</div>
+                <div class="feedback-form__row">
+                  <div class="feedback-form__group">
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Меня зовут</span>
+                    </div>
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Моя компания</span>
+                    </div>
+                  </div>
+                  <div class="feedback-form__group">
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Мой вопрос</span>
+                    </div>
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Телефон</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="contacts__sticky-btn sticky-btn sticky-btn--yellow">
+                  <div class="sticky-btn__text">Отправить</div>
+                  <div class="sticky-btn__icon">
+                    <span></span>
+                    <span></span>
+                    <span class="icon"></span>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="calc-steps-wrap">
+        <div class="wrap">
+          <div id="calc" class="calc tabs">
+            <div class="calc__panel">
+              <div class="calc__num">01</div>
+              <div class="calc__head">
+                <h3 class="calc__title">Услуги</h3>
+              </div>
+              <ul class="calc__nav" role="tablist">
+                <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                  <a href="#tab-01" class="tabs__link" data-tab="tab-01" data-toggle="tab" role="tab">Интернет-магазин</a>
+                </li>
+                <li class="tabs__link-wrap" role="presentation">
+                  <a href="#tab-02" class="tabs__link" data-tab="tab-02" data-toggle="tab" role="tab">Корпоративный</a>
+                </li>
+                <li class="tabs__link-wrap" role="presentation">
+                  <a href="#tab-03" class="tabs__link" data-tab="tab-03" data-toggle="tab" role="tab">Лендинг</a>
+                </li>
+                <li class="tabs__link-wrap" role="presentation">
+                  <a href="#tab-04" class="tabs__link" data-tab="tab-04" data-toggle="tab" role="tab">Продвижение</a>
+                </li>
+                <li class="tabs__link-wrap" role="presentation">
+                  <a href="#tab-05" class="tabs__link" data-tab="tab-05" data-toggle="tab" role="tab">Поддержка</a>
+                </li>
+                <li class="tabs__link-wrap" role="presentation">
+                  <a href="#tab-06" class="tabs__link" data-tab="tab-06" data-toggle="tab" role="tab">Другое</a>
+                </li>
+              </ul>
+            </div>
+            <div class="calc__row">
+              <div class="calc__col-tabs">
+                <div class="tabs__content-wrapper">
+                  <div class="tabs__content-item tabs__content-item--active" id="tab-01" role="tabpanel">
+        <div class="calc__panel">
+          <div class="calc__num">02</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Выбор платформы</h3>
+            <div class="calc__description">
+              <p>От того, что вы предпочтете, зависит функциональность проекта.</p>
+              <p>Если в планах его дальнейшее расширение и увеличение ассортимента товаров, услуг – стоит заказать
+                максимальную версию, как имеющую больше возможностей и настроек.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="60000" id name="magazin-cms" data-option="магазин простой" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Простой интернет-магазин <br> от <span>60 000 ₽</span></h4>
+                        <p>Подберем хорошую альтернативу 1С “Битрикс”.</p>
+                        <span>В стоимость заложены:</span>
+                        <ul>
+                          <li><span>Разработка технического задания;</span></li>
+                          <li><span>Базовое наполнение контентом;</span></li>
+                          <li><span>Тестирование.</span></li>
+                        </ul>
+                        <p>Откройте свой интернет-магазин с минимальными затратами. <br> Подходит для небольшого
+                          количества товаров.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="90000" id name="magazin-cms" data-option="магазин базовый">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Базовый инетрнет-магазин <br> от <span>90 000 ₽</span></h4>
+                        <p>Редакция «Малый бизнес», включен 31 модуль.</p>
+                        <span>В стоимость заложены:</span>
+                        <ul>
+                          <li><span>Разработка технического задания;</span></li>
+                          <li><span>Базовое наполнение контентом;</span></li>
+                          <li><span>Тестирование.</span></li>
+                        </ul>
+                        <p>Откройте свой интернет-магазин с минимальными затратами. <br>Разместите любое
+                          количество товаров в каталоге, управляйте скидками и доставкой. Интегрируйте магазин с
+                          «1С» и «Яндекс.Маркет».</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="120000" id name="magazin-cms" data-option="магазин расшриренный">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Расширенный инетрнет-магазин <br> от <span>120 000 ₽</span></h4>
+                        <p>Редакция «Бизнес», включено 49 модулей.</p>
+                        <span>В стоимость заложены:</span>
+                        <ul>
+                          <li><span>Разработка технического задания;</span></li>
+                          <li><span>Базовое наполнение контентом;</span></li>
+                          <li><span>Тестирование.</span></li>
+                        </ul>
+                        <p>Больше, чем интернет-магазин. Расширяйте возможности вашего сайта: управляйте продажами
+                          товаров, услуг, электронного контента, автоматизируйте обработку заказов, интегрируйте
+                          магазин с «1С», поддерживайте партнерские сети, оценивайте затраты на рекламу,
+                          создавайте сообщества.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="calc__panel">
+          <div class="calc__num">03</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Выбор дизайна</h3>
+            <div class="calc__description">
+              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в
+                соответствии с вашими пожеланиями? Закажите создание сайта интернет-магазина в оригинальном стиле.
+              </p>
+              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="5000" id name="magazin-dizain" data-option="дизайн шаблон" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Шаблон <br> от <span>5 000 ₽</span></h4>
+                        <p>Вы можете выбрать стандартный шаблон.</p>
+                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона
+                          своего сайта по дизайну.</p>
+                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="60000" id name="magazin-dizain" data-option="дизайн уникальный">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Уникальный дизайн <br> от <span>60 000 ₽</span></h4>
+                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт
+                          адаптивным ко всем современным устройствам, а программист настроит функциональную часть
+                          сайта.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>            
+                  <div class="tabs__content-item" id="tab-02" role="tabpanel">
+        <div class="calc__panel">
+          <div class="calc__num">02</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Выбор дизайна</h3>
+            <div class="calc__description">
+              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в
+                соответствии с вашими пожеланиями? Закажите создание корпоративного в оригинальном стиле.
+              </p>
+              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id value="40000" name="korporativniy-dizain" data-option="корпоративный на шаблоне" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Шаблон <br> от <span>40 000 ₽</span></h4>
+                        <p>Вы можете выбрать стандартный шаблон.</p>
+                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона
+                          своего сайта по дизайну.</p>
+                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="80000" id name="korporativniy-dizain" data-option="корпоративный уникальный дизайн">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Уникальный дизайн <br> от <span>80 000 ₽</span></h4>
+                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт
+                          адаптивным ко всем современным устройствам, а программист настроит функциональную часть
+                          сайта.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>            
+                  <div class="tabs__content-item" id="tab-03" role="tabpanel">
+        <div class="calc__panel">
+          <div class="calc__num">02</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Выбор дизайна</h3>
+            <div class="calc__description">
+              <p>Быстро запустить ресурс позволят стандартные шаблоны, однако тогда сайт не будет уникальным.</p>
+              <p>Хотите получить мгновенную узнаваемость среди посетителей портала, эксклюзивный дизайн в
+                соответствии с вашими пожеланиями? Закажите создание лендинга в оригинальном стиле.
+              </p>
+              <p>Это повысит узнаваемость бренда и лояльность потребителей к нему.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="20000" id name="lending-dizain" data-option="лендинг на шаблоне" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Шаблон <br> от <span>20 000 ₽</span></h4>
+                        <p>Вы можете выбрать стандартный шаблон.</p>
+                        <p>Минусы шаблонов в дизайне: его распространненость - в будущем можно встретить клона
+                          своего сайта по дизайну.</p>
+                        <p>Из плюсов: более быстрая реализация с получением основных функциональных элементов</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="50000" id name="lending-dizain" data-option="лендинг уникальный дизайн">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Уникальный дизайн <br> от <span>50 000 ₽</span></h4>
+                        <p>Наш дизайнер разработает эксклюзивный дизайн вашего сайта, верстальщик сделает сайт
+                          адаптивным ко всем современным устройствам, а программист настроит функциональную часть
+                          сайта.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>            
+                  <div class="tabs__content-item" id="tab-04" role="tabpanel">
+        <div class="calc__panel">
+          <div class="calc__num">02</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Выбор продвижения</h3>
+            <div class="calc__description">
+              <p>Эффективное продвижение интернет-проекта в популярных поисковых системах (Google, Яндекс) и социальных сетях (VK, Instagram).</p>
+              <p>Работаем на применении исключительно «белых» методов SEO-оптимизации и маркетинга.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="3000" id name="prodvijenie" data-option="продвижение контекстная реклама" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Контекстная реклама <br> от <span>3 000 ₽</span></h4>
+                         <p>Преумножает поток клиентов в максимально сжатые сроки.</p>
+                        <p>Инструмент, продвигающий товары и услуги для целевой аудитории в Яндекс и Google, отображающих их в соответствии с содержимым страницы пользователя.</p>
+                        <span>Входит:</span>
+                        <ul>
+                          <li><span>Аудит вашей тематики;</span></li>
+                          <li><span>Cбор и сегментация ключевых фраз;</span></li>
+                          <li><span>Подготовка контента;</span></li>
+                          <li><span>Настройка кампаний в Директе и AdWords;</span></li>
+                        </ul>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="5000" id name="prodvijenie" data-option="продвижение smm">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>SMM <br> от <span>5 000 ₽</span></h4>
+                        <p>Работа с целевой аудиторией в социальных сетях: ВКонтакте, Instagram, Facebook.</p>
+                        <span>Входит:</span>
+                        <ul>
+                          <li><span>Анализ целевой аудитории;</span></li>
+                          <li><span>Разработка коммуникационной стратегии;</span></li>
+                          <li><span>Реализация вовлекающей контентной стратегии;</span></li>
+                        </ul>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="10000" id name="prodvijenie" data-option="продвижение seo адаптация">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>SEO адаптация <br> от <span>10 000 ₽</span></h4>
+                        <p>Неотъемлемая часть продвижения сайта, направленная на повышение эффективности его работы, устранению ошибок и налаживания поисковых систем.</p>
+                        <span>Входит:</span>
+                        <ul>
+                          <li><span>Анализ вашего сайта и целевой аудитории;</span></li>
+                          <li><span>Внедрение семантической верстки;</span></li>
+                          <li><span>Оптимизация контента под ключевые запросы;</span></li>
+                        </ul>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>            
+                  <div class="tabs__content-item" id="tab-05" role="tabpanel">
+        <div class="calc__panel">
+          <div class="calc__num">02</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Поддержка и сопровождение</h3>
+            <div class="calc__description">
+              <p>Мы оказываем техническую поддержку сайта после его реализации. А также сопровождаем другие проекты на любой стадии его готовности.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" value="1500" type="radio" id name="podderjka" data-option="техническая поддержка час" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Разовая, час <br> от <span>1 500 ₽</span></h4>
+                        <p>Если требуется решить небольшое количество задач или получить консультацию по работе вашего сайта.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" value="6000" type="radio" id name="podderjka" data-option="техническая поддержка 8 часов">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Абонимент, 8 часов <br> от <span>6 000 ₽</span></h4>
+                        <p>Если требуется временное техническое обслуживание и мониторинг сайта. Входит 8 рабочих часов.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" value="10000" type="radio" id name="podderjka" data-option="техническая поддержка корпоративная">
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Корпоративный, 15 часов <br> от <span>10 000 ₽</span></h4>
+                        <p>Если требуется постоянное техническое обслуживание и мониторинг сайта. Входит 15 рабочих часов.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>            
+                  <div class="tabs__content-item" id="tab-06" role="tabpanel">
+        <div class="calc__panel">
+          <div class="calc__num">02</div>
+          <div class="calc__head">
+            <h3 class="calc__title">Решение других задач</h3>
+            <div class="calc__description">
+              <p>Если вам необходимо решение задачи, которая не указана на нашем сайте, то вы можете сообщить нам о вашей проблеме.</p>
+            </div>
+          </div>
+          <div class="calc__body">
+            <form class="calc__form" action>
+              <div class="field-radio">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" value="0" id name="drugoe" data-option="другое" checked>
+                    <span class="field-radio__name-text">
+                      <div class="calc__radio-caption">
+                        <h4>Напишите нам <br> от <span>0 ₽</span></h4>
+                        <p>Просто нажмите на кнопку "Работаем" и заполните ваши контактные данные.</p>
+                      </div>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>            
+                </div>
+              </div>
+              <div class="calc__col-price">
+                <div class="calc__price">
+                  Стоимость: <br> от <span id="total-price">5 000 ₽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="wrap">
+          <a href="/" class="logo page-footer__logo">
+            <div class="logo__img"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo"/></svg></div>
+            <div class="logo__text">Диджитал агентство полного цикла. Веб-сайты. Реклама и продвижение. Поддержка.</div>
+          </a>
+          <ul class="page-footer__nav">
+            <li><a href="#">Агенство</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="page-footer__list">
+            <li><a href="tel:+78005553535">+7 (800) 555-3535</a></li>
+            <li><a href="mailto:+78005553535">info@lazur.media</a></li>
+            <li><a href="#">Тверь</a></li>
+          </ul>
+          <div class="page-footer__social">
+            <div class="social">
+              <div class="social__title">Социальные сети</div>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="7" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#fa-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ok-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="19" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vk-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="14" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tg-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#call-icon"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a class="pc-link" href="#">Политика конфиденциальности</a>
+          </div>
+          <div class="page-footer__copiright">Copyright © 2019 Lazur media</div>
+        </div>
+      </footer>
+    </div>
+  <div class="zeynep-overlay"></div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script src="js/isMobile.min.js"></script>
+  <script src="js/ofi.js"></script>
+  <script src="js/ofi.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/zeynep.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <script src="js/global-script.js"></script>
+</body>
+</html>

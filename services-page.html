@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>LAZUR</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="zeynep right">
+    <ul>
+      <li>
+        <a href="agency-page.html">Агенство</a>
+      </li>
+      <li>
+        <a href="services-page.html">Услуги</a>
+      </li>
+      <li>
+        <a href="portfolio-page.html">Портфолио</a>
+      </li>
+      <li>
+        <a href="calc-page.html">Калькулятор</a>
+      </li>
+      <li>
+        <a href="contacts-page.html">Контакты</a>
+      </li>
+    </ul>
+  </div>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="wrap">
+          <a href="index.html" class="logo">
+            <div class="logo__img"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo"/></svg></div>
+            <div class="logo__text">Диджитал агентство полного цикла. Веб-сайты. Реклама и продвижение. Поддержка.</div>
+          </a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <button id="main-nav-toggler" class="main-nav__toggler  burger">
+              <svg width="30" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-icon"/></svg>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="agency-page.html" class="main-nav__link">
+                  Агенство
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="services-page.html" class="main-nav__link">
+                  Услуги
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="portfolio-page.html" class="main-nav__link">
+                  Портфолио
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="calc-page.html" class="main-nav__link">
+                  Калькулятор
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="contacts-page.html" class="main-nav__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main role="main">
+        <section class="top-section">
+          <div class="wrap">
+            <div class="top-section__info info-services">
+              <div class="top-section__img"><img src="img/services.jpg" alt></div>
+              <h1 class="top-section__title">Услуги</h1>
+              <div class="top-section__text">
+                <p>Каждый день мы генерируем идеи, рисуем, разрабатываем, продвигаем и анализируем — 
+                  все для того, чтобы вы могли посвящать больше времени улучшению сервиса, не переживая 
+                  за привлечение клиентов</p>
+              </div>
+            </div>
+            <div class="top-section__footer">
+              <a href="#" class="intro__sticky-btn sticky-btn sticky-btn--blue">
+                <div class="sticky-btn__text">Калькулятор проекта</div>
+                <div class="sticky-btn__icon">
+                  <span></span>
+                  <span></span>
+                  <span class="icon"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="wrap">
+            <div class="services__list" id="services-list">
+              <div class="services__item">
+                <div class="services-card">
+                  <div class="services-card__title">Веб-разработка</div>
+                  <ul class="services-card__list">
+                    <li><span>Интернет-магазины</span></li>
+                    <li><span>Корпоративные сайты</span></li>
+                    <li><span>Лендинги</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services__item">
+                <div class="services-card">
+                  <div class="services-card__title">Интеграция</div>
+                  <ul class="services-card__list">
+                    <li><span>Внедрение 1С</span></li>
+                    <li><span>Внедрение CRM систем</span></li>
+                    <li><span>Внедрение систем</span><span>управления проектами</span></li>
+                    <li><span>Внедрение систем внутренних</span><span>корпоративных коммуникаций</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services__item">
+                <div class="services-card">
+                  <div class="services-card__title">Реклама и продвижение</div>
+                  <ul class="services-card__list">
+                    <li><span>SEO</span></li>
+                    <li><span>Аналитика</span></li>
+                    <li><span>Контент-</span><span>маркетинг</span></li>
+                    <li><span>Контекстная и</span><span>таргетированная реклама</span></li>
+                    <li><span>SMM</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services__item">
+                <div class="services-card">
+                  <div class="services-card__title">Поддержка</div>
+                  <ul class="services-card__list">
+                    <li><span>Сопровождение сайтов</span></li>
+                    <li><span>Развитие проектов</span></li>
+                    <li><span>Исправление</span><span>программных ошибок</span></li>
+                    <li><span>Системное</span><span>администрирование</span></li>
+                    <li><span>Обновление информации</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="process">
+          <div class="wrap">
+            <h2 class="process__title">Процесс</h2>
+            <div class="process__group">
+              <div class="process__item">
+                <div class="process__card">
+                  <div class="process__card-header">
+                    <span></span>
+                  </div>
+                  <div class="process__card-body">
+                    <p>Сбор, первичная обработка и анализ данных</p>
+                  </div>
+                </div>
+              </div>
+              <div class="process__item">
+                <div class="process__card">
+                  <div class="process__card-header">
+                    <span></span>
+                  </div>
+                  <div class="process__card-body">
+                    <p>
+                      Реализация: дизайн, верстка, разработка административной части, согласование проекта
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="process__item">
+                <div class="process__card">
+                  <div class="process__card-header">
+                    <span></span>
+                  </div>
+                  <div class="process__card-body">
+                    <p>Оценка результатов, внесение правок, сдача проекта и дальнейшее сопровождение</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="process__footer">
+              <a href="#" class="process__sticky-btn sticky-btn sticky-btn--yellow">
+                <div class="sticky-btn__text">Связаться с нами</div>
+                <div class="sticky-btn__icon">
+                  <span></span>
+                  <span></span>
+                  <span class="icon"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="wrap">
+          <a href="/" class="logo page-footer__logo">
+            <div class="logo__img"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo"/></svg></div>
+            <div class="logo__text">Диджитал агентство полного цикла. Веб-сайты. Реклама и продвижение. Поддержка.</div>
+          </a>
+          <ul class="page-footer__nav">
+            <li><a href="#">Агенство</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="page-footer__list">
+            <li><a href="tel:+78005553535">+7 (800) 555-3535</a></li>
+            <li><a href="mailto:+78005553535">info@lazur.media</a></li>
+            <li><a href="#">Тверь</a></li>
+          </ul>
+          <div class="page-footer__social">
+            <div class="social">
+              <div class="social__title">Социальные сети</div>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="7" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#fa-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ok-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="19" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vk-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="14" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#tg-icon"/></svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#call-icon"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a class="pc-link" href="#">Политика конфиденциальности</a>
+          </div>
+          <div class="page-footer__copiright">Copyright © 2019 Lazur media</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="zeynep-overlay"></div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script src="js/isMobile.min.js"></script>
+  <script src="js/ofi.js"></script>
+  <script src="js/ofi.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/zeynep.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <script src="js/global-script.js"></script>
+</body>
+</html>
