@@ -1,0 +1,135 @@
+// В этом файле должны быть стили для БЭМ-блока process, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.process {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  padding: 40px 0 100px;
+
+  @media (min-width: $screen-md) {
+    background: #82C5E1;
+    padding: 80px 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 30px;
+    color: #67757F;
+
+    @media (min-width: $screen-md) {
+      color: #fff;
+      font-size: 34px;
+      line-height: 44px;
+    }
+  }
+
+  &__group {
+    @include row;
+    counter-reset: process-counter;
+    padding-bottom: 120px;
+
+    @media (max-width: ($screen-md - 1)) {
+      padding-bottom: 40px;
+    }
+    
+    @media (min-width: $screen-xl) {
+      max-width: 75%;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 4);
+  }
+
+  &__card {
+    
+    @media (min-width: $screen-xl) {
+      border: 1px solid #fff;
+      height: 100%;
+      padding: 40px;
+    }
+
+    @media (max-width: ($screen-md - 1)) {
+      display: flex;
+      align-items: center;
+      padding: 20px 15px;
+      height: auto;
+      margin-top: -1px;
+    }
+  }
+
+  &__card-header {
+    position: relative;
+    padding-bottom: 35px;
+
+    @media (max-width: $screen-md) {
+      padding-bottom: 0;
+    }
+
+    span {
+      display: inline-block;
+
+      @media (max-width: ($screen-md - 1)) {
+        width: 135px;
+        flex-basis: 0;
+      }
+
+      &:after {
+        content: "шаг";
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: #fff;
+        display: inline-block;
+        transform: translateY(-65%) translateX(-25%) rotate(-90deg);
+
+        @media (max-width: $screen-md) {
+          display: none;
+        }
+      }
+
+      &:before {
+        counter-increment: process-counter;
+        content: "0" counter(process-counter);
+        font-weight: 700;
+        font-size: 60px;
+        color: #FFEE32;
+        display: inline-block;
+        line-height: 1;
+
+        @media (max-width: ($screen-md - 1)) {
+          margin-right: 10px;
+          font-size: 100px;
+          line-height: 100px;
+        }
+      }
+    }
+  }
+
+  &__card-body {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #67757F;
+
+    @media (min-width: $screen-md) {
+      color: #fff;
+    }
+  }
+
+  &__footer {
+
+  }
+
+  &__sticky-btn {
+    @media (min-width: $screen-xl) {
+      bottom: 80px;
+    }
+  }
+}

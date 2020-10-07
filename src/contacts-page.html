@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>LAZUR</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  @@include('blocks/zeynep/zeynep.html')
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main" class="contacts" style="background-image: url(img/map.jpg);">
+        <div class="contacts__wrap">
+          <div class="wrap">
+            <div class="contacts__body-col">
+              <div class="contacts__body">
+                <h1 class="contacts__title">Контакты</h1>
+                <div class="contacts__info">
+                  <div class="info-part">
+                    Россия, Тверь, <br>улица Пушкина,11
+                  </div>
+                  <div class="info-part">
+                    <p><a href="tel:+78005553535">+7 (800) 555 35 35</a></p>
+                    <p><a href="mailto:info@lazur.medias">info@lazur.medias</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__form-col">
+              <form action="" class="contacts__form feedback-form">
+                <div class="feedback-form__title">Заполните форму и мы свяжемся с вами</div>
+                <div class="feedback-form__row">
+                  <div class="feedback-form__group">
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Меня зовут</span>
+                    </div>
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Моя компания</span>
+                    </div>
+                  </div>
+                  <div class="feedback-form__group">
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Мой вопрос</span>
+                    </div>
+                    <div class="feedback-form__field">
+                      <input type="text" required="required">
+                      <span>Телефон</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="contacts__sticky-btn sticky-btn sticky-btn--yellow">
+                  <div class="sticky-btn__text">Отправить</div>
+                  <div class="sticky-btn__icon">
+                    <span></span>
+                    <span></span>
+                    <span class="icon"></span>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <div class="zeynep-overlay"></div>
+  @@include('_include/page_bottom.html')
+</body>
+</html>

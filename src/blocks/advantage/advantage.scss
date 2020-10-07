@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока advantage, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.advantage {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 60px;
+  }
+  @media (min-width: $screen-xxl) {
+    padding-bottom: 110px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    color: #67757F;
+    @media (min-width: $screen-md) {
+      font-size: 34px;
+      line-height: 44px;
+    }
+    @media (min-width: $screen-xxl) {
+      font-size: 46px;
+      line-height: 60px;
+    }
+  }
+
+  &__list {
+    @include row;
+    list-style: none;
+    padding: 0;
+    counter-reset: adv-counter;
+  }
+
+  &__item {
+    @include col();
+    @include col(xxl, 3);
+    @include col(xl, 4);
+    @include col(md, 6);
+    margin-bottom: 30px;
+  }
+}

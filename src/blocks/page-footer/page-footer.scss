@@ -1,0 +1,116 @@
+// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-footer {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #68ADCB;
+  padding: 80px 0 100px;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    
+    @media (min-width: $screen-md) {
+      padding-right: 100px;
+    }
+    
+    @media (min-width: $screen-xxl) {
+      padding-right: 280px;
+    }
+  }
+
+  .logo {
+    &__img {
+      svg {
+        fill: #fff;
+      }
+    }
+    &__text {
+      color: #fff;
+    }
+
+    @media (max-width: ($screen-md - 1)) {
+      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+  &__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 20px;
+    }
+    a {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: color ease-in-out 0.3s;
+      &:hover {
+        color: #FFEE32;
+      }
+    }
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 20px;
+    }
+    a {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: #fff;
+      transition: color ease-in-out 0.3s;
+      @media (min-width: $screen-xxl) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      &:hover {
+        color: #FFEE32;
+      }
+    }
+  }
+  &__social {
+    @media (max-width: ($screen-md - 1)) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .social {
+      margin-bottom: 30px;
+    }
+    .pc-link {
+      color: #fff;
+      transition: color ease-in-out 0.3s;
+      &:hover {
+        color: #FFEE32;
+        text-decoration: none;
+      }
+    }
+  }
+  &__copiright {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    opacity: 0.5;
+    
+    @media (min-width: $screen-md) {
+      transform: rotate(-90deg);
+      position: absolute;
+      right: -100px;
+      top: 110px;
+    }
+  }
+}

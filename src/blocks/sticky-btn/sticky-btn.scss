@@ -1,0 +1,223 @@
+// В этом файле должны быть стили для БЭМ-блока sticky-btn, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sticky-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  user-select: none;
+  box-sizing: border-box;
+  text-transform: none;
+  background-color: #ccc;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+  cursor: pointer;
+
+  @media (max-width: ($screen-md - 1)) {
+    // transform: translateX(15px);
+    height: 60px;
+    padding: 0 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-end;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 100%;
+      background: #82C5E1;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    width: 246px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    padding: 0 30px 0 20px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    width: 252px;
+    height: 82px;
+    padding: 16px 37px;
+    // left: calc(100% - 252px);
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 60px;
+    color: #67757F;
+    text-align: center;
+    padding-right: 20px;
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 50px;
+      padding-right: 0;
+    }
+    @media (min-width: $screen-xxl) {
+      position: absolute;
+      font-size: 16px;
+      font-weight: bold;
+      top: 10px;
+      right: 100%;
+      padding: 20px;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+  }
+  &__icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    @media (min-width: $screen-xxl) {
+      width: 49px;
+      height: 49px;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: 0.5s;
+      transform: translateX(0);
+
+      &:nth-child(2) {
+        background: #FFCB0F;
+      }
+
+      &.icon {
+        background: #FFEE32;
+        border: 1px solid #67757F;
+        transform: translateX(15%);
+
+        &:before {
+          content: "";
+          display: block;
+          width: 7px;
+          height: 7px;
+          border-right: 1px solid #67757F;
+          border-bottom: 1px solid #67757F;
+          position: absolute;
+          top: 11px;
+          left: 9px;
+          transform: rotate(-45deg);
+
+          @media (min-width: $screen-xxl) {
+            top: 16px;
+            left: 14px;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    #{$block-name}__icon {
+      span {
+        transition: 0.5s;
+        &.icon {
+          z-index: 100;
+          transform: translateX(40%);
+        }
+        &:nth-child(2) {
+          transform: translateX(20%);
+          background: #FFCB0F;
+        }
+        &:nth-child(1) {
+          transform: translateX(0%);
+          background: #FFCB0F;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &--yellow {
+    background-color: #FFEE32;
+
+    @media (max-width: ($screen-md - 1)) {
+      &:before {
+        background: #FFEE32;
+      }
+    }
+    
+    #{$block-name}__text {
+      color: #67757F;
+      @media (min-width: $screen-md) {
+        color: #67757F;
+      }
+      @media (min-width: $screen-xxl) {
+        color: #fff;
+      }
+    }
+  }
+  &--blue {
+    background-color: #82C5E1;
+    #{$block-name}__icon {
+      span {
+        &:nth-child(2) {
+          background: #6BA5BE;
+        }
+        &.icon {
+          background: #82C5E1;
+          border: 1px solid #fff;
+          &:before {
+            border-color: #fff;
+          }
+        }
+      }
+    }
+    #{$block-name}__text {
+      color: #fff;
+      @media (min-width: $screen-md) {
+        color: #fff;
+      }
+      @media (min-width: $screen-xxl) {
+        color: #67757F;
+      }
+    }
+
+    &:hover {
+      #{$block-name}__icon {
+        span {
+          transition: 0.5s;
+          &.icon {
+            z-index: 100;
+            transform: translateX(40%);
+          }
+          &:nth-child(2) {
+            transform: translateX(20%);
+            background: #6BA5BE;
+          }
+          &:nth-child(1) {
+            transform: translateX(0%);
+            background: #6BA5BE;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

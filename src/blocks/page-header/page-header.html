@@ -1,0 +1,48 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <div class="logo__img"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo"></use></svg></div>
+      <div class="logo__text">Диджитал агентство полного цикла. Веб-сайты. Реклама и продвижение. Поддержка.</div>
+    </a>
+    <nav id="main-nav" class="main-nav" role="navigation">
+      <button id="main-nav-toggler" class="main-nav__toggler  burger">
+        <svg width="30" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-icon"></use></svg>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a href="agency-page.html" class="main-nav__link">
+            Агенство
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="services-page.html" class="main-nav__link">
+            Услуги
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="portfolio-page.html" class="main-nav__link">
+            Портфолио
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="calc-page.html" class="main-nav__link">
+            Калькулятор
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contacts-page.html" class="main-nav__link">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,99 @@
+// В этом файле должны быть стили для БЭМ-блока advantage-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.advantage-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background-color: #82C5E1;
+  padding: 20px 30px 30px 30px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color $transition-time;
+  height: 100%;
+  cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    padding: 30px;
+  }
+  @media (min-width: $screen-xxl) {
+    padding: 40px;
+  }
+
+  &__header {
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      counter-increment: adv-counter;
+      content: "0" counter(adv-counter);
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 45px;
+      margin-right: 20px;
+
+      @media (min-width: $screen-md) {
+        line-height: 34px;
+      }
+      @media (min-width: $screen-xxl) {
+        top: 5px;
+        font-size: 60px;
+        line-height: 45px;
+        margin-right: 30px;
+      }
+    }
+    @media (min-width:$screen-md) {
+      margin-bottom: 34px;
+    }
+    @media (min-width:$screen-xxl) {
+      margin-bottom: 70px;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    @media (min-width: $screen-xxl) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    span {
+      display: block;
+    }
+  }
+
+  &__body {
+     p {
+      margin: 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      @media (min-width: $screen-xxl) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+     }
+  }
+
+  &--last {
+    min-height: 340px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 215px;
+    background-color: #fff;
+    height: 100%;
+  }
+
+  &:hover {
+    background-color: #FFEE32;
+    color: #67757F;
+  }
+}
